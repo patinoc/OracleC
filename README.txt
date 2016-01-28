@@ -1,3 +1,5 @@
+Name: Christian Patino
+CS username: patino
 Welcome.
 
 You have sucessfully obtained a copy of the contents in the oracle repository.
