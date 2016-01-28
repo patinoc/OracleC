@@ -142,6 +142,8 @@ void parseOrders(std::string line, std::vector<WoodItem>& orders)
  */
 double deliveryMultiplier(int bfamount)
 {
+	if (bfamount <= 0)
+		return 0;
 	if (bfamount <= 100)
 		return 1;
 	else if (bfamount <= 200)
