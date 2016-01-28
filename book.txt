@@ -1,0 +1,15 @@
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut eros mi. Aenean at ligula orci. Duis massa ante, 
+sodales vel tempus ut, mollis interdum leo. Integer felis diam, pharetra id nibh id, scelerisque dapibus tortor. Donec 
+venenatis tempus lorem, et scelerisque nisl tempor sed. Morbi id lorem arcu. Mauris id arcu ut odio eleifend pharetra 
+id a leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Class aptent taciti 
+sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla facilisi. Vestibulum consequat velit erat. 
+Maecenas pulvinar congue tincidunt. Cras volutpat est vel ipsum vestibulum vestibulum commodo id velit.
+
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   book.txt
