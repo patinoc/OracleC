@@ -13,10 +13,12 @@ WoodItem::WoodItem() {
 	type = "";
 	baseDeliveryTime = 0.0;
 	price = 0.0;
+	amount = 0;
 }
 
-WoodItem::WoodItem(std::string woodType, double deliveryTime, double itemPrice) {
+WoodItem::WoodItem(std::string woodType, double deliveryTime, double itemPrice, int itemAmount) {
 	type = woodType;
 	baseDeliveryTime = deliveryTime;
 	price = itemPrice;
+	amount = itemAmount;
 }

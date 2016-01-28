@@ -7,6 +7,7 @@
 //============================================================================
 
 #include <iostream>
+#include <iomanip>
 #include <sstream>
 #include <fstream>
 #include <vector>
@@ -45,8 +46,28 @@ int main(int argc, char* argv[]) {
 	}
 	Customer customer;
 	std::vector<WoodItem> orders;
+	int total_price = 0;
 
 	readInputFile(std::string(argv[1]), customer, orders);
+	for (auto w : orders)
+	{
+		total_price += w.price;
+	}
+
+	std::cout << "Name: " << customer.name << '\n' << "Address: "
+		<< customer.address << '\n' << "Date: " << customer.date << "\n\n";
+
+	std::cout << std::left << std::setw(15) << "Wood Type"  
+		<< std::setw(8) << "Amount" << std::setw(12) << "Price ($)" << 
+		std::right << std::setw(15) << "Delivery Time (in hours)\n"
+		<< "--------------------------------------------------------------\n";
+	for (auto w : orders)
+		std::cout << std::left << std::setw(10) << w.type << std::right << std::setw(10) << w.amount
+		<< std::setprecision(2) << std::fixed << std::setw(10) << w.price << std::setw(10)
+			<< w.baseDeliveryTime << '\n';
+
+	std::cout << "\nEstimated Delivery Time: " << deliveryTime(orders) << '\n'
+		      << "Total Price: $" << total_price << '\n';
 
 	return 0;
 }
@@ -66,10 +87,12 @@ void readInputFile(std::string inputFilePath, Customer& customer, std::vector<Wo
 		std::string customer_info, orders_line;
 		
 		std::getline(inFile, customer_info);
-		parseCustomer(customer_info, customer);
+		if (!customer_info.empty())
+			parseCustomer(customer_info, customer);
 
 		std::getline(inFile, orders_line);
-		parseOrders(orders_line, orders);
+		if (!orders_line.empty())
+			parseOrders(orders_line, orders);
 	}
 
 }
@@ -105,6 +128,7 @@ void parseOrders(std::string line, std::vector<WoodItem>& orders)
 		int amount;
 		std::getline(iss, w.type, ':'); 
 		iss >> amount;
+		w.amount = amount;
 		w.price = amount * BASE_PRICE[w.type];
 		w.baseDeliveryTime = deliveryMultiplier(amount) * BASE_DELIVERY_TIME[w.type];
 		orders.push_back(w);

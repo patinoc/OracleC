@@ -20,10 +20,11 @@ public:
 	std::string type;
 	double baseDeliveryTime;
 	double price;
+	int amount;
 
 	// Member functions declaration
 	WoodItem();
-	WoodItem(std::string woodType, double deliveryTime, double itemPrice);
+	WoodItem(std::string woodType, double deliveryTime, double itemPrice, int itemAmount);
 
 };
 
