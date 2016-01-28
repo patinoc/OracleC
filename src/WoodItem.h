@@ -6,7 +6,7 @@
  */
 
 
-#include <string.h>
+#include <string>
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -15,7 +15,6 @@
 #define WOODITEM_H_
 
 class WoodItem {
-
 public:
 
 	std::string type;
