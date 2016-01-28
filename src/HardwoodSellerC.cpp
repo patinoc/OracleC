@@ -57,12 +57,12 @@ int main(int argc, char* argv[]) {
 	std::cout << "Name: " << customer.name << '\n' << "Address: "
 		<< customer.address << '\n' << "Date: " << customer.date << "\n\n";
 
-	std::cout << std::left << std::setw(15) << "Wood Type"  
-		<< std::setw(8) << "Amount" << std::setw(12) << "Price ($)" << 
+	std::cout << std::left << std::setw(20) << "Wood Type"  
+		<< std::setw(8) << "Amount" << std::setw(10) << "Price ($)" << 
 		std::right << std::setw(15) << "Delivery Time (in hours)\n"
 		<< "--------------------------------------------------------------\n";
 	for (auto w : orders)
-		std::cout << std::left << std::setw(10) << w.type << std::right << std::setw(10) << w.amount
+		std::cout << std::left << std::setw(15) << w.type << std::right << std::setw(10) << w.amount
 		<< std::setprecision(2) << std::fixed << std::setw(10) << w.price << std::setw(10)
 			<< w.baseDeliveryTime << '\n';
 
