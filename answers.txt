@@ -1,0 +1,8 @@
+(a) 6 commits
+(b) August 24, 2015 (5 months ago)
+(c) No files were in the repository on 8/21/2015 
+(d) None of the files in src were modified
+(e) `git log` shows commit logs while `git status` shows the status of the working tree
+(f) `git log --follow main.java`
+(g) `git log --grep="transaction"`
+(h) `git log --author="Lauren" --after="2016-01-05" --before="2016-02-16"`
